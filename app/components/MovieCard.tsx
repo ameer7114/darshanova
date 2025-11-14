@@ -8,7 +8,7 @@ export default function MovieCard({ movie }: { movie: Movie }) {
     <Link href={`/movie/${movie.imdbID}`}>
       <div className="min-w-[120px] cursor-pointer">
         <Image
-          src={movie.Poster !== 'N/A' ? movie.Poster : '/default.jpg'}
+          src={movie.Poster && movie.Poster !== 'N/A' ? movie.Poster : '/default.jpg'}
           alt={movie.Title}
           width={160}
           height={240}
